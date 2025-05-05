@@ -1,0 +1,367 @@
+body,html {
+  margin:0;
+  background-color: #2F303A;
+   height: 100vh;
+}
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+address,
+blockquote,
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.container {
+  max-width: 320px;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.amount, .selectTank, .selectLiquid, .selectVolume {
+  background-color: yellow;
+  /* padding: 10px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  min-width: 230px;
+  margin-bottom: 20px;
+  border-radius: 10px
+
+}
+
+.calculation {
+  /* height: 100vh; */
+    background-color: #2F303A;
+    font-weight: 500;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.calculation__title {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.title {
+  color: white;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+/* .calculation__name{
+    color: white;
+    padding-bottom: 5px;
+    text-align: center;
+    
+} */
+
+.submitFirstForm, .submitFinaltForm, .refreshButton{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  min-width: 230px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background-color: grey;
+}
+.submitFirstForm:hover, .submitFinaltForm:hover, .refreshButton:hover {
+  background-color: rgb(252, 14, 14);
+}
+.refreshButton {
+  margin-bottom: 20px;
+}
+
+.selectVolume{
+    margin-bottom: 10px;
+}
+
+.inputDiametr{
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.label{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+padding-left: 10px;
+  border-radius: 10px;
+  min-width: 210px;
+  background-color: yellow; 
+  
+}
+
+.selectDiameter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Стилі для доданих резервуарів  */
+.titleTank{
+  color:white
+}
+.tankWhoAdd {
+  min-width: 220px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+background-color: #fff;
+border-radius: 10px;
+}
+.tankWhoAddItem{
+
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .amount, .selectTank, .selectLiquid, .selectVolume {
+    background-color: yellow;
+    /* padding: 10px; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 0px;
+    min-width: 430px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    font-size: 25px;
+  line-height: 1.5;
+  }
+  .submitFirstForm, .submitFinaltForm, .refreshButton{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 430px;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    background-color: grey;
+    font-size: 25px;
+    line-height: 1.5;
+  }
+
+  .calculation__title {
+
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.title {
+  color: white;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+.inputDiametr{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label{
+ padding-top: 20px;
+ padding-bottom: 20px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+padding-left: 30px;
+ border-radius: 10px;
+ min-width: 410px;
+ background-color: yellow; 
+ font-size: 30px;
+ border-radius: 30px;
+}
+
+.selectDiameter{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+/* Стилі для доданих резервуарів  */
+.titleTank{
+ color:white;
+ font-size: 30px;
+}
+.tankWhoAdd {
+ min-width: 430px;
+ padding-left: 0;
+ padding-right: 0;
+ margin-bottom: 10px;
+ margin-top: 10px;
+background-color: #fff;
+font-size: 20px;
+border-radius: 30px;
+}
+.tankWhoAddItem{
+ padding: 10px;
+ padding-left: 15px;
+ border-radius: 30px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+
+  .container {
+    max-width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .amount, .selectTank, .selectLiquid, .selectVolume {
+    background-color: yellow;
+    /* padding: 10px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 0px;
+    min-width: 630px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    font-size: 40px;
+  line-height: 1.5;
+  }
+  .submitFirstForm, .submitFinaltForm, .refreshButton{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    min-width: 630px;
+    margin-bottom: 0px;
+    border-radius: 30px;
+    background-color: grey;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+
+  .calculation__title {
+
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.title {
+  color: white;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+.inputDiametr{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.label{
+ padding-top: 30px;
+ padding-bottom: 30px;
+ margin-bottom: 10px;
+ margin-top: 10px;
+padding-left: 30px;
+ border-radius: 10px;
+ min-width: 610px;
+ background-color: yellow; 
+ font-size: 30px;
+ 
+ border-radius: 30px;
+}
+
+.selectDiameter{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+}
+
+/* Стилі для доданих резервуарів  */
+.titleTank{
+ color:white;
+ font-size: 30px;
+}
+.tankWhoAdd {
+ min-width: 630px;
+ padding-left: 0;
+ padding-right: 0;
+ margin-bottom: 10px;
+ margin-top: 10px;
+background-color: #fff;
+font-size: 30px;
+border-radius: 30px;
+}
+.tankWhoAddItem{
+ padding: 10px;
+ padding-left: 30px;
+ border-radius: 30px;
+}
+}
+
+
+
+

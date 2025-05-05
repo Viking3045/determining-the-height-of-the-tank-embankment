@@ -1,0 +1,149 @@
+const nominalVolume = {
+    "rvspAndRvs": [
+        {
+            "nominalVolume": 100,
+            "internalDiameter": 4.73,
+            "wallHeight": 6.0
+        },
+        {
+            "nominalVolume": 200,
+            "internalDiameter": 6.63,
+            "wallHeight": 6.0
+        },
+        {
+            "nominalVolume": 300,
+            "internalDiameter": 7.58,
+            "wallHeight": 7.5
+        },
+        {
+            "nominalVolume": 400,
+            "internalDiameter": 8.53,
+            "wallHeight": 7.5
+        },
+        {
+            "nominalVolume": 700,
+            "internalDiameter": 10.43,
+            "wallHeight": 9.0
+        },
+        {
+            "nominalVolume": 5000,
+            "internalDiameter": 22.8,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 5000,
+            "internalDiameter": 20.92,
+            "wallHeight": 15.0
+        },
+        {
+            "nominalVolume": 10000,
+            "internalDiameter": 28.5,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 10000,
+            "internalDiameter": 34.2,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 20000,
+            "internalDiameter": 39.9,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 20000,
+            "internalDiameter": 47.4,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 30000,
+            "internalDiameter": 45.6,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 40000,
+            "internalDiameter": 56.9,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 50000,
+            "internalDiameter": 60.7,
+            "wallHeight": 18.0
+        }
+    ],
+    "rvspp" : [
+        {
+            "nominalVolume": 1000,
+            "internalDiameter": 12.33,
+            "wallHeight": 9.0
+        },
+        {
+            "nominalVolume": 2000,
+            "internalDiameter": 15.18,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 3000,
+            "internalDiameter": 18.98,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 5000,
+            "internalDiameter": 22.8,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 10000,
+            "internalDiameter": 28.5,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 10000,
+            "internalDiameter": 34.2,
+            "wallHeight": 12.0
+        },
+        {
+            "nominalVolume": 20000,
+            "internalDiameter": 39.9,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 30000,
+            "internalDiameter": 45.6,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 40000,
+            "internalDiameter": 56.9,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 50000,
+            "internalDiameter": 60.7,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 60000,
+            "internalDiameter": 67.6,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 75000,
+            "internalDiameter": 75.7,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 100000,
+            "internalDiameter": 87.4,
+            "wallHeight": 18.0
+        },
+        {
+            "nominalVolume": 120000,
+            "internalDiameter": 95.4,
+            "wallHeight": 18.0
+        }
+    ]
+
+}
+
+export { nominalVolume };
