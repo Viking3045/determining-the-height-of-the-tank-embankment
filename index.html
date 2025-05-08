@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <section class="calculation  center">
+        <div class="container ">
+          <div class="wrapper">
+            <input type="checkbox" name="checkbox" class="switch">
+            </div>
+        </div>
+      </section>
+     
+        
+    </header>
     <main class="main">
       <section class="calculation">
       <div class="container ">
-      <h1 class="calculation__title">Визначення висоти обвалування для групи резервуарів</h1>
+      <h1 class="calculation__title" data-lang-en="Determining the embankment height for a group of tanks" data-lang-ua="Визначення висоти обвалування для групи резервуарів">Визначення висоти обвалування для групи резервуарів</h1>
       <!-- <h2 class="calculation__name">кількість резервуарів</h2>
       <input class="amount input" placeholder="Введіть кількість резервуарів" type="number"  maxlength="2" minlength="1" /> -->
  
@@ -20,57 +30,57 @@
       <h2 class="calculation__name">довжина сторони b</h2>
       <input class="lengthB input" type="number" /> -->
       <ul>
-        <li> <h2 class="title">Кількіть резевуарів</h2>
+        <li> <h2 class="title temeWhiteTitle" data-lang-en="Number of reservoirs" data-lang-ua="Кількіть резевуарів">Кількіть резевуарів</h2>
           <select class=" amount">
-            <option class="" value disabled selected>Оберіть кількість резервуарів</option> 
-            <option value="1">1 шт</option> 
-            <option value="2">2 шт</option> 
-            <option value="3">3 шт</option> 
-            <option value="4">4 шт</option> 
-            <option value="5">5 шт</option> 
-            <option value="6">6 шт</option> 
-            <option value="7">7 шт</option> 
-            <option value="8">8 шт</option> 
-            <option value="9">9 шт</option> 
-            <option value="10">10 шт</option> 
-            <option value="11">11 шт</option> 
-            <option value="12">12 шт</option> 
-            <option value="13">13 шт</option> 
-            <option value="14">14 шт</option> 
-            <option value="15">15 шт</option> 
-            <option value="16">16 шт</option> 
-            <option value="17">17 шт</option> 
-            <option value="18">18 шт</option> 
-            <option value="19">19 шт</option> 
-            <option value="20">20 шт</option> 
-            <option value="21">21 шт</option> 
-            <option value="22">22 шт</option> 
-            <option value="23">23 шт</option> 
-            <option value="24">24 шт</option> 
-            <option value="25">25 шт</option> 
-            <option value="26">26 шт</option> 
-            <option value="27">27 шт</option> 
-            <option value="28">28 шт</option> 
-            <option value="29">29 шт</option> 
-            <option value="30">30 шт</option> 
+            <option class="" value disabled selected data-lang-en="Choose the number of tanks" data-lang-ua="Оберіть кількість резервуарів">Оберіть кількість резервуарів</option> 
+            <option value="1" data-lang-en="1 pcs" data-lang-ua="1 шт">1 шт</option> 
+            <option value="2" data-lang-en="2 pcs" data-lang-ua="2 шт">2 шт</option> 
+            <option value="3" data-lang-en="3 pcs" data-lang-ua="3 шт">3 шт</option> 
+            <option value="4" data-lang-en="4 pcs" data-lang-ua="4 шт">4 шт</option> 
+            <option value="5" data-lang-en="5 pcs" data-lang-ua="5 шт">5 шт</option> 
+            <option value="6" data-lang-en="6 pcs" data-lang-ua="6 шт">6 шт</option> 
+            <option value="7" data-lang-en="7 pcs" data-lang-ua="7 шт">7 шт</option> 
+            <option value="8" data-lang-en="8 pcs" data-lang-ua="8 шт">8 шт</option> 
+            <option value="9" data-lang-en="9 pcs" data-lang-ua="9 шт">9 шт</option> 
+            <option value="10" data-lang-en="10 pcs" data-lang-ua="10 шт">10 шт</option> 
+            <option value="11" data-lang-en="11 pcs" data-lang-ua="11 шт">11 шт</option> 
+            <option value="12" data-lang-en="12 pcs" data-lang-ua="12 шт">12 шт</option> 
+            <option value="13" data-lang-en="13 pcs" data-lang-ua="13 шт">13 шт</option> 
+            <option value="14" data-lang-en="14 pcs" data-lang-ua="14 шт">14 шт</option> 
+            <option value="15" data-lang-en="15 pcs" data-lang-ua="15 шт">15 шт</option> 
+            <option value="16" data-lang-en="16 pcs" data-lang-ua="16 шт">16 шт</option> 
+            <option value="17" data-lang-en="17 pcs" data-lang-ua="17 шт">17 шт</option> 
+            <option value="18" data-lang-en="18 pcs" data-lang-ua="18 шт">18 шт</option> 
+            <option value="19" data-lang-en="19 pcs" data-lang-ua="19 шт">19 шт</option> 
+            <option value="20" data-lang-en="20 pcs" data-lang-ua="20 шт">20 шт</option> 
+            <option value="21" data-lang-en="21 pcs" data-lang-ua="21 шт">21 шт</option> 
+            <option value="22" data-lang-en="22 pcs" data-lang-ua="22 шт">22 шт</option> 
+            <option value="23" data-lang-en="23 pcs" data-lang-ua="23 шт">23 шт</option> 
+            <option value="24" data-lang-en="24 pcs" data-lang-ua="24 шт">24 шт</option> 
+            <option value="25" data-lang-en="25 pcs" data-lang-ua="25 шт">25 шт</option> 
+            <option value="26" data-lang-en="26 pcs" data-lang-ua="26 шт">26 шт</option> 
+            <option value="27" data-lang-en="27 pcs" data-lang-ua="27 шт">27 шт</option> 
+            <option value="28" data-lang-en="28 pcs" data-lang-ua="28 шт">28 шт</option> 
+            <option value="29" data-lang-en="29 pcs" data-lang-ua="29 шт">29 шт</option> 
+            <option value="30" data-lang-en="30 pcs" data-lang-ua="30 шт">30 шт</option> 
           </select></li>
-        <li> <h2 class="title"> Тип пального</h2>
+        <li> <h2 class="title temeWhiteTitle" data-lang-en="Type of fuel" data-lang-ua="Тип пального"> Тип пального</h2>
           <select class="selectLiquid">
-            <option value disabled selected>Оберіть тип пального</option> 
-            <option value="ЛЗР">ЛЗР</option>
-            <option value="ГР">ГР </option> 
-            <option value="Бензин">Бензин</option>
-            <option value="Дизпаливо">Дизпаливо</option> 
+            <option value disabled selected data-lang-en="Choose fuel type" data-lang-ua="Оберіть тип пального">Оберіть тип пального</option> 
+            <option value="ЛЗР" data-lang-en="IL" data-lang-ua="ЛЗР">ЛЗР</option>
+            <option value="ГР" data-lang-en="FL" data-lang-ua="ГР">ГР </option> 
+            <option value="Бензин" data-lang-en="Gasoline" data-lang-ua="Бензин">Бензин</option>
+            <option value="Дизпаливо" data-lang-en="Diesel fuel" data-lang-ua="Дизпаливо">Дизпаливо</option> 
           </select></li>
-        <li> <h2 class="title"> Тип резервуару (ів)</h2>
+        <li> <h2 class="title temeWhiteTitle" data-lang-en="Tank type(s)" data-lang-ua="Тип резервуару (ів)"> Тип резервуару (ів)</h2>
           <select class="selectTank">
-            <option value disabled selected>Оберіть тип резервуару (ів)</option> 
-            <option value="rvspAndRvs">РВС або РВСП</option>
-            <option value="rvspp">РВСПП</option>
+            <option value disabled selected data-lang-en="Select the type of tank(s)" data-lang-ua="Оберіть тип резервуару (ів)">Оберіть тип резервуару (ів)</option> 
+            <option value="rvspAndRvs" data-lang-en="VTWSCWP or VTWSC" data-lang-ua="РВС або РВСП">РВС або РВСП</option>
+            <option value="rvspp" data-lang-en="VTWFC" data-lang-ua="РВСПП">РВСПП</option>
           </select></li>
-        <li> <h2 class="title">Об'єм резервуару (ів)</h2>
+        <li> <h2 class="title temeWhiteTitle" data-lang-en="Tank volume(s)" data-lang-ua="Об'єм резервуару (ів)">Об'єм резервуару (ів)</h2>
           <select class="selectVolume">
-            <option class="selectedVolume" value disabled selected>Оберіть об'єм резервуару (ів)</option> 
+            <option class="selectedVolume" value disabled selected data-lang-en="Select the volume of the tank(s)" data-lang-ua="Оберіть об'єм резервуару (ів)">Оберіть об'єм резервуару (ів)</option> 
           </select></li>
           <li>
             <h2 class="titleForDiametr title"></h2>
@@ -88,14 +98,15 @@
         class="submitFirstForm"
         style="padding: 20px"
         type="button"
+        data-lang-en="Add tank" data-lang-ua="Додати резервуар"
       > Додати резервуар</button>
    
     </div>
     </section>
     <section class="secondSection calculation">
-      <div class="container">
+      <div class="container  ">
       <h2 class="title"></h2>
-      <ul class="calculationForm ">
+      <ul class="calculationForm">
       </ul>
       <!-- <button  class="submitFinaltForm"
       style="padding: 20px"
@@ -104,7 +115,55 @@
     </section>
       
     </main>
-    <footer></footer>
+    <footer>
+      <section class="calculation">
+
+        <div class="container">
+          <ul class="join__list">
+            <li class="join__item">
+              <a
+                class="join__link"
+                href="https://github.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="join__icon" width="34" height="34">
+                  <use href="./images/sprite.svg#github"></use>
+                </svg>
+              </a>
+            </li>
+  
+            <!-- <li class="join__item">
+              <a
+                class="join__link"
+                href="https://telegram.org/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="join__icon" width="34" height="34">
+                  <use href="./images/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+            </li> -->
+  
+            <li class="join__item">
+              <a
+                class="join__link"
+                href="https://www.facebook.com/profile.php?id=100070495414338"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg class="join__icon" width="34" height="34">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="copyriting">Copyright © 2025 NUCZ Ukraine. Created by Vitalii Stepanenko</p> 
+        </div>
+      </section>
+      
+    </footer>
     <!-- <script src="index.js" type="module"></script> -->
     <script src="index.js" type="module"></script>
   </body>
