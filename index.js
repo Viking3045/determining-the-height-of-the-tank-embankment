@@ -1,4 +1,5 @@
 // import nominalVolume from "./nominalVolume.json" assert {type:"json"};
+console.log("patron")
 import { nominalVolume } from "./nominalVolume.js";
 // console.log("gaming", nominalVolume)
 const main = document.querySelector(".main");
@@ -28,8 +29,15 @@ selectDiameter.addEventListener("change", saveDiametr);
 selectVolume.addEventListener("click", function () {
   if (obj.type.length >= 1 && obj.liquid.length >= 1 && obj.amount >= 1) {
     selectVolume.addEventListener("change", setOutputVolume);
+    
   } else {
-    alert("Будь ласка заповніть поля вище");
+    const language = localStorage.getItem("ui-language")
+    if (language === 'dark') {
+      alert("Будь ласка заповніть поля вище");
+  } else{
+    alert("Please fill in the fields above");
+  }
+   
   }
 });
 
@@ -111,7 +119,8 @@ function setOutput(event) {
       } else{
         option.textContent = `${nominalVolume} м³`;;
       }
-
+          option.setAttribute("data-lang-ua",`${nominalVolume} м³`)
+  option.setAttribute("data-lang-en", `${nominalVolume} m³`)  
       // option.textContent = `${nominalVolume} м³`;
 
       return option;
@@ -178,7 +187,8 @@ function setOutputVolume(event) {
     } else{
     label.textContent = ` ${internalDiameter.internalDiameter} м`
     }
-
+   label.setAttribute("data-lang-ua",`${internalDiameter.internalDiameter} м³`)
+  label.setAttribute("data-lang-en", `${internalDiameter.internalDiameter} m³`)  
     // label.textContent = ` ${internalDiameter.internalDiameter} м`;
     label.classList = "label";
 
@@ -218,6 +228,8 @@ console.log("allDiametrs", obj.allDiametrs)
 const objAllVolume = amount * volume
 obj.objAllVolume = objAllVolume
 console.log("objAllVolume", obj.objAllVolume)
+  titleForDiametr.removeAttribute("data-lang-ua","Оберіть діаметр")
+  titleForDiametr.removeAttribute("data-lang-en", "Choose a diameter")
   // const type = obj.type;
 
   // const volume = obj.volume;
@@ -247,35 +259,84 @@ console.log("objAllVolume", obj.objAllVolume)
     // } else{
     //   option.textContent = `${nominalVolume} м³`;;
     // }
+
+  
     if (type === "rvspAndRvs") {
-      type1.textContent = `Тип резервуара: РВСП або РВС`;
-    } else {
-      type1.textContent = `Тип резервуара: РВСПП`;
+        const language = localStorage.getItem("ui-language")
+        if (language === 'dark') {
+    type1.textContent = `Тип резервуара: РВСП або РВС`;
+  } else{
+    type1.textContent = `Tank type: VTWSCWP or VTWSC`;
+  }
+      // type1.textContent = `Тип резервуара: РВСП або РВС`;
+       type1.setAttribute("data-lang-ua","Тип резервуара: РВСП або РВС")
+    type1.setAttribute("data-lang-en", "Tank type: VTWSCWP or VTWSC")
+    } else {   const language = localStorage.getItem("ui-language")
+           if (language === 'dark') {
+   type1.textContent = `Тип резервуара: РВСПП`;
+  } else{
+    type1.textContent = `Tank type: VTWFC`;
+  }
+      // type1.textContent = `Тип резервуара: РВСПП`;
+      type1.setAttribute("data-lang-ua","Тип резервуара: РВСПП")
+    type1.setAttribute("data-lang-en", "Tank type: VTWFC")
     }
 
     ul.append(type1);
 
     const liquid1 = document.createElement("li");
     liquid1.classList = "tankWhoAddItem content";
-    liquid1.textContent = `Тип рідини: ${liquid}`;
-    ul.append(liquid1);
+    // liquid1.textContent = `Тип рідини: ${liquid}`;
+     liquid1.setAttribute("data-lang-ua",`Тип рідини: ${liquid}`)
+    liquid1.setAttribute("data-lang-en", `Liquid type: ${liquid}`)
+   
     const total1 = document.createElement("li");
     total1.classList = "tankWhoAddItem content";
-    total1.textContent = `Кількість: ${amount} шт`;
-    ul.append(total1);
+    // total1.textContent = `Кількість: ${amount} шт`;
+     total1.setAttribute("data-lang-ua",`Кількість: ${amount} шт`)
+    total1.setAttribute("data-lang-en", `Amount: ${amount} pcs`)
+
     const volume1 = document.createElement("li");
     volume1.classList = "tankWhoAddItem content";
-    volume1.textContent = `Об'єм: ${volume} м³`;
-    ul.append(volume1);
+    // volume1.textContent = `Об'єм: ${volume} м³`;
+    volume1.setAttribute("data-lang-ua",`Об'єм: ${volume} м³`)
+    volume1.setAttribute("data-lang-en", `Volume: ${volume} m³`)
+  
     const diametr1 = document.createElement("li");
     diametr1.classList = "tankWhoAddItem content";
-    diametr1.textContent = `Діаметр:  ${diametr} м`;
+    // diametr1.textContent = `Діаметр:  ${diametr} м`;
+    diametr1.setAttribute("data-lang-ua",`Діаметр:  ${diametr} м`)
+    diametr1.setAttribute("data-lang-en", `Diameter:  ${diametr} m`)
+ const language = localStorage.getItem("ui-language")
+    if (language === 'dark') {
+     liquid1.textContent = `Тип рідини: ${liquid}`;
+     total1.textContent = `Кількість: ${amount} шт`;
+     volume1.textContent = `Об'єм: ${volume} м³`;
+       diametr1.textContent = `Діаметр:  ${diametr} м`;
+  } else{
+     liquid1.textContent = `Liquid type: ${liquid}`;
+     total1.textContent = `Amount: ${amount} pcs`;
+     volume1.textContent = `Volume: ${volume} m³`;
+       diametr1.textContent = `Diameter:  ${diametr} m`;
+  }
+
+
+    ul.append(liquid1);
+    ul.append(total1);
+    ul.append(volume1);
     ul.append(diametr1);
     item.append(ul);
 
     // Створення кнопки для розрахунків
     const submitFinalForm = document.createElement("button");
-    submitFinalForm.textContent = "Розрахувати";
+     if (language === 'dark') {
+        submitFinalForm.textContent = "Розрахувати";
+     } else{
+      submitFinalForm.textContent = "Calculate";
+     }
+    
+      submitFinalForm.setAttribute("data-lang-ua",`Розрахувати`)
+    submitFinalForm.setAttribute("data-lang-en", `Calculate`)
     submitFinalForm.type = "button";
     submitFinalForm.style = "padding: 20px";
     submitFinalForm.classList = "submitFinaltForm";
@@ -302,7 +363,7 @@ console.log("objAllVolume", obj.objAllVolume)
     }
     const defaultOption = document.createElement("option");
     defaultOption.value = "default";
-    const language = localStorage.getItem("ui-language")
+    // const language = localStorage.getItem("ui-language")
     if (language === 'dark') {
       defaultOption.textContent = "Оберіть об'єм резервуару (iв)";
     } else{
@@ -326,7 +387,15 @@ console.log("objAllVolume", obj.objAllVolume)
 
     obj.counter = 1;
   } else {
-    alert("Будь ласка заповніть всі поля");
+    const language = localStorage.getItem("ui-language")
+    if (language === 'dark') {
+      alert(
+        "Будь ласка заповніть всі поля");
+  } else{
+    alert(
+      "Please fill in all fields");
+  }
+    
   }
 }
 //
@@ -500,19 +569,44 @@ console.log("allDiametres", (allDiametres).toFixed(2));
   ul.classList = "tankWhoAdd ulTAnkWhoAdd cont";
   const height = document.createElement("li");
   height.classList = "tankWhoAddItem content";
-  height.textContent = `Вимагаєма висота обвалування ${heightOfCollapse} м`;
-  ul.append(height);
+  // height.textContent = `Вимагаєма висота обвалування ${heightOfCollapse} м`;
+  height.setAttribute("data-lang-ua",`Вимагаєма висота обвалування: ${heightOfCollapse} м`)
+    height.setAttribute("data-lang-en", `Required embankment height: ${heightOfCollapse} m`)
+ 
   const weight = document.createElement("li");
   weight.classList = "tankWhoAddItem content";
-  weight.textContent = `Ширина обвалування ${objCollapseInWidth} м`;
-  ul.append(weight);
+  // weight.textContent = `Ширина обвалування ${objCollapseInWidth} м`;
+   weight.setAttribute("data-lang-ua",`Ширина обвалування: ${objCollapseInWidth} м`)
+    weight.setAttribute("data-lang-en", `The width of the collapse: ${objCollapseInWidth} m`)
+
   const internalHeight = document.createElement("li");
   internalHeight.classList = "tankWhoAddItem content";
-  internalHeight.textContent = `Висота внутрішнього обвалування ${theHeightOfTheInternalEmbankment} м`;
-  ul.append(internalHeight);
+  // internalHeight.textContent = `Висота внутрішнього обвалування ${theHeightOfTheInternalEmbankment} м`;
+    internalHeight.setAttribute("data-lang-ua",`Висота внутрішнього обвалування: ${theHeightOfTheInternalEmbankment} м`)
+    internalHeight.setAttribute("data-lang-en", `Internal embankment height: ${theHeightOfTheInternalEmbankment} m`)
+
   const buttonRefresh = document.createElement("button");
   buttonRefresh.classList = "refreshButton";
-  buttonRefresh.textContent = "Провести нові розрахунки";
+  // buttonRefresh.textContent = "Провести нові розрахунки";
+
+
+ const language = localStorage.getItem("ui-language")
+    if (language === 'dark') {
+     height.textContent = `Вимагаєма висота обвалування: ${heightOfCollapse} м`;
+      weight.textContent = `Ширина обвалування: ${objCollapseInWidth} м`;
+      internalHeight.textContent = `Висота внутрішнього обвалування: ${theHeightOfTheInternalEmbankment} м`;
+      buttonRefresh.textContent = "Провести нові розрахунки";
+  } else{
+     height.textContent = `Required embankment height: ${heightOfCollapse} m`;
+      weight.textContent = `The width of the collapse: ${objCollapseInWidth} m`;
+      internalHeight.textContent = `Internal embankment height: ${theHeightOfTheInternalEmbankment} m`;
+      buttonRefresh.textContent = `Perform new calculations`;
+  }
+ ul.append(height);
+  ul.append(weight);
+  ul.append(internalHeight);
+    buttonRefresh.setAttribute("data-lang-ua",`Провести нові розрахунки`)
+    buttonRefresh.setAttribute("data-lang-en", `Perform new calculations`)
   buttonRefresh.addEventListener("click", refreshPage);
   function refreshPage() {
     location.reload();
@@ -580,14 +674,10 @@ console.log("allDiametres", (allDiametres).toFixed(2));
 
 // ________________________________________________Тема сторінки__________
 const checkbox = document.querySelector('.switch');
-
-checkbox.addEventListener('click', function() {
-  const temeWhiteTitle = document.querySelectorAll("*")
-  const elements = document.querySelectorAll('[data-lang-en], [data-lang-ua]');
+const checkbox2 = document.querySelector('.switch2');
+checkbox2.addEventListener('click', function(){
+ const elements = document.querySelectorAll('[data-lang-en], [data-lang-ua]');
     if (this.checked) {
-       temeWhiteTitle.forEach(switcher => {
-        switcher.style.color = "black"
-        switcher.style.backgroundColor = "white"
         localStorage.removeItem("ui-language");
         localStorage.setItem("ui-language", "light")
        const language = localStorage.getItem("ui-language")
@@ -598,17 +688,8 @@ checkbox.addEventListener('click', function() {
         }
            
         });
-
-
-
-        
-    });
       
     } else {
-      temeWhiteTitle.forEach(switcher => {
-        switcher.style.color = ""
-        switcher.style.backgroundColor = ""
-
         localStorage.removeItem("ui-language");
         localStorage.setItem("ui-language", "dark")
         const language = localStorage.getItem("ui-language")
@@ -617,7 +698,22 @@ checkbox.addEventListener('click', function() {
             el.textContent = el.dataset.langUa;
         }
       });
+     
+    }
+})
+checkbox.addEventListener('click', function() {
+  const temeWhiteTitle = document.querySelectorAll("*")
+  // const elements = document.querySelectorAll('[data-lang-en], [data-lang-ua]');
+    if (this.checked) {
+       temeWhiteTitle.forEach(switcher => {
+        switcher.style.color = "black"
+        switcher.style.backgroundColor = "white"
+    });
       
+    } else {
+      temeWhiteTitle.forEach(switcher => {
+        switcher.style.color = ""
+        switcher.style.backgroundColor = ""
    });
      
     }
