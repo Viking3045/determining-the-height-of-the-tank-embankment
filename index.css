@@ -554,7 +554,9 @@ width: 130px;
 
   
   
-
+.update{
+  margin-top: 20px;
+}
 
 
 
@@ -692,6 +694,9 @@ width: 130px;
 @media screen and (min-width: 768px) {
 .center{
   height: 60px;
+}
+.update{
+  margin-top: 0px;
 }
   .container {
     max-width: 768px;
